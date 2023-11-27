@@ -78,33 +78,6 @@
 									<li><a href="https://public.tableau.com/app/profile/harshitha.madihalli/viz/GenderDistributionofCompanyEmployeesOverTime/Dashboard2" class="button">View Project</a></li>
 								</ul>
 							</article>
-							</article>
-							// PDF.js code to display a PDF page as an image
-
-							// URL of the PDF file
-							const pdfUrl = 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_EJtg2n3t73yhXbHBm_1701052493378_completion_certificate.pdf';
-
-							// Initialize PDF.js
-							pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
-							    // Get the first page of the PDF
-							    pdf.getPage(1).then(function(page) {
-							        const canvas = document.getElementById('pdfCanvas');
-							        const context = canvas.getContext('2d');
-							
-							        // Set the canvas size to the PDF page size
-							        const viewport = page.getViewport({ scale: 1.5 });
-							        canvas.height = viewport.height;
-							        canvas.width = viewport.width;
-							
-							        // Render the PDF page on the canvas as an image
-							        const renderContext = {
-							            canvasContext: context,
-							            viewport: viewport
-							        };
-							        page.render(renderContext);
-							    });
-							});
-							</article>
 						</div>					
 					</section>
 				<!-- Three -->
